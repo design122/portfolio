@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact |Portfolio</title>
+  <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+  <header>      <div class="header-inner">
+    <a href="index.html" class="header-logo">Portfolio</a>
+    <!-- ハンバーガー -->
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+
+    <!-- ナビメニュー -->
+    <nav class="nav" id="nav">
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="works.html">WORKS</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const nav = document.getElementById('nav');
+
+  hamburger.addEventListener('click', () => {
+    nav.classList.toggle('active');
+  });
+</script>  
+  <header class="sub-header">
+    <h2>Contact</h2>
+ 
+  </header>
+
+  <main class="container-contact">
+    <p>お仕事のご相談・ご質問は下記メール からお気軽にどうぞ。</p>
+
+    <ul class="contact-links">
+      <li><strong>Mail：</strong><a href="mailto:meijiexiaosen@gmail.com">meijiexiaosen@gmail.com</a></li>
+    </ul>
+  </main>
+</body>
+</html>
