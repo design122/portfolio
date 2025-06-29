@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Works | Miyu Portfolio</title>
+  <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+  <header>      <div class="header-inner">
+    <a href="index.html" class="header-logo">Portfolio</a>
+    <!-- ハンバーガー -->
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+
+    <!-- ナビメニュー -->
+    <nav class="nav" id="nav">
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="works.html">WORKS</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const nav = document.getElementById('nav');
+
+  hamburger.addEventListener('click', () => {
+    nav.classList.toggle('active');
+  });
+</script>  
+  
+  <header class="sub-header">
+    <h2>Works</h2>
+  </header>
+
+  <main class="work-container">
+    <section class="cards">
+      <!-- Work 1 -->
+      <article class="card">
+        <a href="https://design122.github.io/sample/">
+          <img src="2.png" alt="カフェサイト">
+          <h2>Cafe Lumière</h2></a>
+          <p class="tech">HTML / CSS / Photoshop</p>
+          <p>ナチュラルな雰囲気のカフェをイメージした架空サイト。<br>
+            柔らかい配色と写真を活かしたレイアウトで、店舗の世界観を伝えています。</p>
+      </article>
+
+      <!-- Work 2 -->
+      <article class="card">
+        <a href="https://design122.github.io/hair-atelier-Lino/">
+          <img src="1.png" alt="美容室サイト">
+          <h2>hair atelier Lino</h2></a>
+          <p class="tech">HTML / CSS / JavaScript</p>
+          <p>女性向けの上品な美容室サイトを想定。<br>
+            トップ・メニュー・スタイリスト紹介など、構成と導線にこだわりました。</p>
+         
+        
+      </article>
+
+      <!-- Work 3 -->
+      <article class="card">
+        <a href="https://rinobe.biz/">
+          <img src="3.png" alt="リフォームサイト">
+          <h2>techno.rinobe</h2></a>
+          <p class="tech">HTML / CSS / JavaScript /WordPress</p>
+      </article>
+    </section>
+  </main>
+</body>
+</html>
