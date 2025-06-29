@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+  <html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About |Portfolio</title>
+    <link rel="stylesheet" href="stylesheet.css">
+  </head>
+  <body>
+    <header>      <div class="header-inner">
+      <a href="index.html" class="header-logo">Portfolio</a>
+      <!-- ハンバーガー -->
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+      <!-- ナビメニュー -->
+      <nav class="nav" id="nav">
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="works.html">WORKS</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+          
+        </ul>
+      </nav>
+    </div>
+    <header class="sub-header">
+      <h2>About</h2>
+  </header>
+    </header>
+    <script>
+      const hamburger = document.getElementById('hamburger');
+      const nav = document.getElementById('nav');
+    
+      hamburger.addEventListener('click', () => {
+        nav.classList.toggle('active');
+      });
+    </script>  
+  <main class="main-container">
+    <section class="profile">
+      <img src="IMG_4949.jpg" alt="みゆの写真" class="profile-img">
+      <div class="work-text">
+      <h4>小森美結</h4>
+      <p>
+        Webデザイナーを目指して、HTML/CSSを中心に独学で学習しています。<br>
+        Progateで基礎を学び、現在は架空のカフェや美容室、リフォームサイト、ジャンルの異なる複数のサイトをデザイン・コーディングしながらポートフォリオを制作しています。<br><br>
+    
+        PhotoshopやIllustratorも基本操作が可能で、見た人にやさしく伝わるデザインを心がけています。<br>
+        実務経験はまだありませんが、責任を持って丁寧に取り組む姿勢を大切にしています。<br><br>
+    
+        今後は、現場での実務経験を積みながら、より多くの人に伝わるデザイン・実用的なサイト制作ができるようになりたいと考えています。
+      </p>
+    </div>
+    </section>
+    <section class="value">
+      <h4>大切にしていること</h4>
+      <p>余白・階層・導線を意識し、ユーザーが迷わない UI を設計。  
+         またアクセシビリティとページ軽量化を常に意識しています。</p>
+    </section>
+
+  </main>
+</body>
+</html>
