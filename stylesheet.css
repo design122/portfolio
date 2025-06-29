@@ -1,0 +1,372 @@
+body {
+  font-family: "Helvetica Neue", "Noto Sans JP", sans-serif;
+  background-color: #ffffff;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  position: relative;
+  color:#3B2F2F ;
+}
+
+.header-logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+  color: #3B2F2F;
+  text-decoration: none;
+
+}
+.nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
+}
+
+.nav ul li a {
+  text-decoration: none;
+ color: #1B2A41;
+  font-weight: 600;
+  padding: 5px 10px;
+  display: block;
+  font-family: "Cormorant", serif;
+}
+
+.nav ul li a:hover {
+  color: #c96;
+}
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 1001; 
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+h2{
+  font-family:"Cormorant", serif;
+ letter-spacing: 0.3em;
+ font-size:36px;
+
+}
+  @media screen and (max-width: 768px) {
+    .hamburger {
+      display: flex;
+    }
+  
+    .nav {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 700px;
+      background: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 30px;
+      z-index: 1000;
+      transform: translateY(-100%);
+      transition: transform 0.4s ease;
+    }
+  
+    .nav.active {
+      transform: translateY(0);
+    }
+  
+    .nav ul {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      text-align: center;
+      line-height: 3em;
+    }
+  
+    .nav ul li a {
+      font-size: 20px;
+      color: #333;
+    }
+  }
+.header {
+  border-bottom: 1px solid #90897c;
+  padding-bottom: 40px;
+}
+.container{
+    position:relative;
+    background-image: url(Whiteday2020-09.JPG);
+    background-size:cover;
+    background-position: center;
+     color: #123456;
+    display: flex;
+    height: 500px;
+    justify-content: flex-start;
+  align-items: center;   
+}
+
+.container::before{
+  content: "";
+  position: absolute;
+  inset: 0;                     /* 親と同じサイズ */
+  background: url(Whiteday2020-09.JPG) center/cover no-repeat;
+  transform: scaleX(-1);        /* ← 左右反転！ */
+  z-index: 0;       /* テキストより背面 */
+  
+}
+
+.container-text{
+  position: relative;
+  text-align: left;
+  z-index: 1;
+   font-family: serif;
+}
+.container-text h1 {
+  font-size: 50px;
+  margin: 0;
+letter-spacing: 0.1em;
+}
+
+.container-text p {
+  margin-top: 10px;
+  font-size:22px;
+   line-height: 1.6;
+}
+
+
+
+.section {
+  padding: 60px 20px;
+}
+
+.section h2 {
+  border-bottom: 1px solid #90897c;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+}
+
+.work-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.work-item img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.work-item h3 {
+  margin: 10px 0 5px;
+  text-decoration:underline;
+  color: #333;
+     font-family: "Cormorant", serif;
+}
+
+footer {
+  text-align: center;
+  padding: 40px 20px;
+  border-top: 1px solid #90897c;
+  font-size: 14px;
+  color: #666;
+}
+
+/* ===== Contact セクション全体 ===== */
+.contact {
+  text-align: center;          /* ②の段落を中央揃えに */
+  padding: 60px 20px;          /* 上下余白（数字はお好みで） */
+}
+
+/* ===== ① 画像＋オーバーレイ文字のラッパー ===== */
+.contact-title {
+  position: relative;          /* 子要素の absolute 基準に */
+  max-width: 1000px;            /* 幅を制限する場合。不要なら削除 */
+  height: 200px;   
+  margin: 0 auto;              /* センター寄せ */
+  overflow: hidden;            /* はみ出し防止（必要に応じて） */
+}
+
+/* 画像自体 */
+.contact-title img {
+  width: 100%;
+  height: 100%;  
+  display: block;              /* 余白削除 */
+  object-fit: cover;           /* 画像をトリミングしてフィット（任意） */
+}
+
+/* オーバーレイ文字 */
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);  /* 完全中央に配置 */
+  color: #fff;
+  font-size: 30px;/* 画面幅で可変する文字サイズ */
+  transition: all  0.3s ease;
+  letter-spacing: 0.1em;
+  margin: 0;
+     font-family: "Cormorant", serif;
+     text-decoration: none;
+}
+.overlay-text:hover{
+  color:gray ;
+}
+
+
+
+/* ===== ② サブコピー ===== */
+.contact-title1 p {
+  margin-top: 32px;            /* ①との間隔 */
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+/* ===== スマホ向け微調整（例） ===== */
+@media (max-width: 599px) {
+  .overlay-text {
+    padding: 0.3em 0.8em;
+  }
+  .contact-title1 p {
+    font-size: 0.95rem;
+  }
+}
+.more {
+  position: relative;               /* 疑似要素の基準にする */
+  display: inline-block;
+  color: #696151;                       /* 初期状態は白文字で見える */
+  background: transparent;    
+  text-decoration: none;
+  overflow: hidden;                     /* 疑似要素がはみ出さない */
+  z-index: 0;                           /* ボタン自体のスタッキングコンテキスト */
+  transition: color .3s;
+}
+
+/* 白い透過オーバーレイ */
+.more::after {
+  content: '';
+  position: absolute;
+  inset: 0;                         /* top/right/bottom/left:0 の短縮 */
+  background: rgba(255,255,255,.7); /* 好みで不透明度を調整 (.2〜.5) */
+  opacity: 0;
+  transition: opacity .3s;
+  pointer-events: none;             /* クリックを邪魔しない */
+}
+
+/* ── ホバー時に白く反転 ─────────────── */
+.more:hover::after { opacity: 1; }    /* 白い幕がふわっとかかる */
+.more:hover        { color: var(--accent); }  /* 文字はアクセント色へ反転 */
+
+
+
+/* サブページのヘッダー */
+.sub-header { padding: 40px 5% 20px; text-align: center; }
+.sub-header h1 { font-size: 1.8rem; margin-bottom: 12px; }
+
+/* プロフィール画像 */
+.main-container{
+  max-width: 1200px;
+  margin: 0 auto; 
+}
+.profile{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+
+}
+@media (max-width:768px){
+  .profile{
+    flex-direction:column; /* ★縦並びに切替 */
+    align-items:center;    /* 写真もテキストも中央寄せ */
+    text-align:center;     /* テキスト中央寄せ（任意） */
+  }
+}
+
+.profile-img { width: 140px; height: 140px; border-radius: 50%; object-fit: cover; margin-bottom: 16px; }
+.work-text {
+  flex: 1;
+  padding-left: 20px;
+
+}
+.value{
+  text-align: center;
+}
+
+/* カード型作品一覧 */
+.cards { display: grid; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); gap: 32px; }
+.card { overflow:hidden; }
+.card img:hover { transform: translateY(-4px); }
+.card img { width: 100%; height: auto; display: block; transition:transform .3s;}
+.card h2 { font-size:1.1rem; padding:16px; }
+.tech { font-size:.85rem; color:#555; padding:0 16px 8px; }
+.card a{
+  text-decoration: none;
+  color: #1B2A41;
+  transition:transform .3s;
+}
+.card a:hover{color: #929292;}
+.card p{
+  font-size:.85rem; color:#555; padding:0 16px 3px; 
+}
+
+/* Skills 星評価フォントサイズ調整 */
+.skills-list ul li { margin-bottom: 6px; }
+
+/* Contact リスト */
+.contact-links { list-style:none; padding-left:0; }
+.contact-links li { margin-bottom:12px; }
+.contact-links a { color:var(--accent); text-decoration:none; }
+
+.arrow {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 1.5px;
+  margin-top: 6.8px;
+  border-radius: 9999px;
+  background-color: #696151;
+}
+
+.arrow::before {
+  content: "";
+  position: absolute;
+  top: calc(50% - 0.75px);
+  right: 0;
+  width: 15px;
+  height: 1.5px;
+  border-radius: 9999px;
+  background-color: #696151;
+  transform: rotate(30deg);
+  transform-origin: calc(100% - 0.75px) 50%;
+}
+.container-contact{
+  text-align: center;
+}
+.skill-container{
+  display: flex;
+  justify-content: center;
+  
+}
