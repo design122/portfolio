@@ -157,6 +157,11 @@ letter-spacing: 0.1em;
    line-height: 1.6;
 }
 
+@media screen and (max-width: 768px) {
+.container{
+  height: 400px;
+}
+  }
 
 
 .section {
